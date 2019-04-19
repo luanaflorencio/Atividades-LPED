@@ -1,11 +1,17 @@
 body{
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 60vh;
   margin-left: 10%;
 }
+
 .mushroom{
   height: 20px;
   width: 20px;
+  animation: mushroom 2s infinite linear;
+  animation-direction: reverse;
+
   box-shadow: 
     20px 0 0 #FFF, 40px 0 0 #FFF, 60px 0 0 #FFF, 80px 0 0 #FFF, 100px 0 0 #FFF, 120px 0 0 #FFF, 140px 0 0 #000, 160px 0 0 #000, 180px 0 0 #000, 200px 0 0 #000, 220px 0 0 #000, 240px 0 0 #000,
     20px 20px 0 #FFF, 40px 20px 0 #FFF, 60px 20px 0 #FFF, 80px 20px 0 #FFF, 100px 20px 0 #000, 120px 20px 0 #000, 140px 20px 0 #F00, 160px 20px 0 #F00, 180px 20px 0 #F00, 200px 20px 0 #F00, 220px 20px 0 #b71c1c, 240px 20px 0 #b71c1c, 260px 20px 0 #000, 280px 20px 0 #000,
@@ -25,4 +31,15 @@ body{
     20px 300px 0 #FFF, 40px 300px 0 #FFF, 60px 300px 0 #FFF, 80px 300px 0 #000, 100px 300px 0 #FFF, 120px 300px 0 #FFF, 140px 300px 0 #FFF, 160px 300px 0 #FFF, 180px 300px 0 #FFF, 200px 300px 0 #E0E0E0, 220px 300px 0 #E0E0E0, 240px 300px 0 #E0E0E0, 260px 300px 0 #BDBDBD, 280px 300px 0 #BDBDBD, 300px 300px 0 #000, 
     20px 320px 0 #FFF, 40px 320px 0 #FFF, 60px 320px 0 #FFF, 80px 320px 0 #FFF, 100px 320px 0 #000, 120px 320px 0 #000, 140px 320px 0 #FFF, 160px 320px 0 #E0E0E0, 180px 320px 0 #E0E0E0, 200px 320px 0 #E0E0E0, 220px 320px 0 #BDBDBD, 240px 320px 0 #BDBDBD, 260px 320px 0 #000, 280px 320px 0 #000, 
     20px 340px 0 #FFF, 40px 340px 0 #FFF, 60px 340px 0 #FFF, 80px 340px 0 #FFF, 100px 340px 0 #FFF, 120px 340px 0 #FFF, 140px 340px 0 #000, 160px 340px 0 #000, 180px 340px 0 #000, 200px 340px 0 #000, 220px 340px 0 #000,240px 340px 0 #000
+}
+
+@keyframes mushroom {
+  0% {
+    transform: rotate(0deg);  
+  
+  }
+  50% {
+    transform: rotate(5deg);  
+
+  }
 }
