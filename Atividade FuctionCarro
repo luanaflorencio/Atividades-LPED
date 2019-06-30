@@ -1,0 +1,30 @@
+class Carro {
+  constructor(modelo, marca) {
+    this.modelo = modelo;
+    this.marca = marca;
+    
+  }
+}
+
+function imprimirCarro(p) {
+  console.log("modelo - ", p.modelo);
+  console.log("marca - ", p.marca);
+
+  if (p.modelo == "Toro") {
+  console.log("o modelo el Toro");
+} else {
+  console.log("não el Toro");
+}
+if(p.marca == "Fiat"){
+  console.log("o carro é da marca Fiat");
+} else {
+  console.log("o carro não é da marca Fiat");
+}
+}
+
+p1 = new Carro();
+p1.modelo = "Toro";
+p1.marca = "Fiat";
+
+
+imprimirCarro(p1);

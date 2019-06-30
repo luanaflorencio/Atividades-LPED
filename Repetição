@@ -1,0 +1,35 @@
+const http = require('http');
+
+const host = 'localhost';
+const porta = 3000;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.write('<html>');
+    res.write('<body>');
+    res.write('<ul>');
+
+    var array = [1, 4, 6, -9];
+
+    for (var i = 0; i < array.length; i++) { 
+        res.write(`<li>${array[i]}</li>`);
+    }
+    var inverso = [];
+    var y = 0;
+  
+    for (var i = array.length -1; i >= 0; i--) {
+        inverso[y]=array[i];
+        res.write(`<li>${inverso[y]}</li>`);
+        y++;
+    }
+
+    res.write('</ul>');
+    res.write('</body>');
+    res.write('</html>');
+    res.end();
+});
+
+server.listen(porta, host, () => {
+  console.log(`Servidor rodando em http://${host}:${porta}/`);
+});

@@ -1,0 +1,35 @@
+const http = require('http');
+
+const host = '127.0.0.1';
+const porta = 3000;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.write('<html>');
+    res.write('<body>');
+    res.write('<table style="border-collapse:collapse;max-width:80px;max-height:80px;">');
+
+    for (var i = 0; i < 8; i++) {
+        res.write('<tr>');
+        for (var j = 0; j < 8; j++) {
+        // note o ` na string
+			a=i+j;
+            if (a%2==0) {
+                res.write(`<td style="background-color: black;width:10px;height:10px;border:1px solid black;"></td>`);
+            } else {
+                res.write(`<td style="width:10px; height:10px;border:1px solid black;" ></td>`);
+            }
+            }
+        res.write('</tr>');
+    }
+
+    res.write('</table>');
+    res.write('</body>');
+    res.write('</html>');
+    res.end();
+});
+
+server.listen(porta, host, () => {
+  console.log(`Servidor rodando em http://${host}:${porta}/`);
+});
